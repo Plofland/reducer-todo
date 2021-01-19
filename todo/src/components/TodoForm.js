@@ -1,9 +1,19 @@
 import React, { Component } from 'react';
 
 export default class TodoForm extends Component {
+  state = {
+    inputText: ''
+  };
+
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.handleAddTodo('new todo');
+    this.props.handleAddTodo(this.state.inputText);
+  };
+
+  handleChange = (e) => {
+    this.setState({
+      inputText: e.target.value
+    });
   };
 
   render() {
@@ -12,7 +22,7 @@ export default class TodoForm extends Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Title:
-            <input />
+            <input onChange={this.handleChange} value={this.state.inputText} />
           </label>
           <button>Submit Todo</button>
         </form>

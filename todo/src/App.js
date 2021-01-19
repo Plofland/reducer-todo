@@ -4,7 +4,7 @@ import TodoList from './components/TodoList';
 
 import { useReducer } from 'react';
 import reducer, { initialState } from './reducer/index';
-import { addTodo } from './actions/index';
+import { addTodo, toggleCompleted } from './actions/index';
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -13,10 +13,14 @@ function App() {
     dispatch(addTodo('title'));
   };
 
+  const handleToggleCompleted = (id) => {
+    dispatch(toggleCompleted(0));
+  };
+
   return (
     <div>
       <h1>Todo App</h1>
-      {/* <button onClick={handleClick}>test button</button> */}
+      <button onClick={handleToggleCompleted}>test button</button>
       <TodoList props={state.todos} />
       <TodoForm handleAddTodo={handleAddTodo} />
     </div>

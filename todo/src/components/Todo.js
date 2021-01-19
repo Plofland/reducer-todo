@@ -4,7 +4,7 @@ export default function Todo(props) {
   const { todo } = props;
   return (
     <div>
-      <li>{todo.title}</li>;
+      <li className={todo.completed ? 'completed' : ''}>{todo.title}</li>;
     </div>
   );
 }
