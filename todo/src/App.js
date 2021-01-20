@@ -9,8 +9,8 @@ import { addTodo, clearCompleted, toggleCompleted } from './actions/index';
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const handleAddTodo = () => {
-    dispatch(addTodo('title'));
+  const handleAddTodo = (title) => {
+    dispatch(addTodo(title));
   };
 
   const handleToggleCompleted = (id) => {
