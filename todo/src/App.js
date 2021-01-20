@@ -14,7 +14,7 @@ function App() {
   };
 
   const handleToggleCompleted = (id) => {
-    dispatch(toggleCompleted(0));
+    dispatch(toggleCompleted(id));
   };
 
   const handleClearCompleted = () => {
