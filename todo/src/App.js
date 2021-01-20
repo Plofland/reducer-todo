@@ -21,13 +21,15 @@ function App() {
     dispatch(clearCompleted);
   };
 
+  console.log(state.todos);
   return (
-    <div>
+    <div className="App">
       <h1>Todo App</h1>
       <button onClick={handleClearCompleted}>test button</button>
       <TodoList
-        props={state.todos}
+        todos={state.todos}
         handleToggleCompleted={handleToggleCompleted}
+        handleClearCompleted={handleClearCompleted}
       />
       <TodoForm handleAddTodo={handleAddTodo} />
     </div>

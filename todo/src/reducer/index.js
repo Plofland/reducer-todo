@@ -3,7 +3,7 @@ export const initialState = {
     {
       title: 'todo1',
       id: 0,
-      completed: false
+      completed: true
     },
     {
       title: 'todo2',
