@@ -21,8 +21,11 @@ export default class TodoForm extends Component {
       <div className="todoForm">
         <form onSubmit={this.handleSubmit}>
           <label>
-            Title:
-            <input onChange={this.handleChange} value={this.state.inputText} />
+            <input
+              onChange={this.handleChange}
+              value={this.state.inputText}
+              placeholder="Enter a Task"
+            />
           </label>
           <button>Submit Todo</button>
         </form>

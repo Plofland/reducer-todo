@@ -1,18 +1,13 @@
 export const initialState = {
   todos: [
     {
-      title: 'todo1',
+      title: 'This task is done',
       id: 0,
       completed: true
     },
     {
-      title: 'todo2',
+      title: 'Click Task to Cross Off',
       id: 1,
-      completed: false
-    },
-    {
-      title: 'todo3',
-      id: 2,
       completed: false
     }
   ]

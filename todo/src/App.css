@@ -1,6 +1,11 @@
+* {
+  /* background-color: silver; */
+}
+
 .App {
   text-align: center;
   font-size: 1.2rem;
+  background-color: #869389;
 }
 
 .App-header {
@@ -14,8 +19,8 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.list {
+  list-style-type: none;
 }
 
 .completed {

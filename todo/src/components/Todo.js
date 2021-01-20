@@ -7,11 +7,10 @@ export default function Todo(props) {
     handleToggleCompleted(todo.id);
   };
   return (
-    <div>
+    <div className="list">
       <li onClick={handleClick} className={todo.completed ? 'completed' : ''}>
         {todo.title}
       </li>
-      ;
     </div>
   );
 }

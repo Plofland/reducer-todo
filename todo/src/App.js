@@ -18,20 +18,20 @@ function App() {
   };
 
   const handleClearCompleted = () => {
-    dispatch(clearCompleted);
+    dispatch(clearCompleted());
   };
 
   console.log(state.todos);
   return (
     <div className="App">
-      <h1>Todo App</h1>
-      <button onClick={handleClearCompleted}>test button</button>
+      <h1>Uninspired Todo App</h1>
+      <TodoForm handleAddTodo={handleAddTodo} />
+      <button onClick={handleClearCompleted}>Clear Completed</button>
       <TodoList
         todos={state.todos}
         handleToggleCompleted={handleToggleCompleted}
         handleClearCompleted={handleClearCompleted}
       />
-      <TodoForm handleAddTodo={handleAddTodo} />
     </div>
   );
 }
