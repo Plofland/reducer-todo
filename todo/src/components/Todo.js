@@ -1,10 +1,17 @@
 import React from 'react';
 
 export default function Todo(props) {
-  const { todo } = props;
+  const { todo, handleToggleCompleted } = props;
+
+  const handleClick = () => {
+    handleToggleCompleted(todo.id);
+  };
   return (
     <div>
-      <li className={todo.completed ? 'completed' : ''}>{todo.title}</li>;
+      <li onClick={handleClick} className={todo.completed ? 'completed' : ''}>
+        {todo.title}
+      </li>
+      ;
     </div>
   );
 }
