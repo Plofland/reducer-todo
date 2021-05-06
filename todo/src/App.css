@@ -1,0 +1,28 @@
+* {
+  /* background-color: silver; */
+}
+
+.App {
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: #869389;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.completed {
+  text-decoration: line-through;
+}
